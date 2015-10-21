@@ -1,3 +1,4 @@
+import edu.mnscu.acct.DocLink
 import org.mycompany.Address
 import org.mycompany.Person
 
@@ -80,6 +81,39 @@ class BootStrap {
             karaWhiting.addToAddresses(
                     new Address(state: "CA", city: "Sandiego", streetAddress: "9901 Shore Dr.", zipCode: "98741")
             ).save(failOnError: true)
+        }
+
+        /*
+         private int docLinkId;
+    private String appPageName;
+    private BigDecimal appPageSectionNbr;
+    private String docTypeDesc;
+    private String presentOrderCode;
+    private String docLinkUrl;
+
+    Insert into ISRSVAL.DOC_LINK (DOC_LINK_ID,APP_PAGE_NAME,APP_PAGE_SECTION_NBR,DOC_TYPE_DESC,PRESENT_ORDER_CODE,DOC_LINK_URL)
+values (1,'payment-voucher-form.jsp',1,'User Guide','1','https://connect.mnscu.edu/sites/isrsproducts/Accounting/Documents/EncumbranceProject.docx');
+
+
+Insert into ISRSVAL.DOC_LINK (DOC_LINK_ID,APP_PAGE_NAME,APP_PAGE_SECTION_NBR,DOC_TYPE_DESC,PRESENT_ORDER_CODE,DOC_LINK_URL)
+values (2,'ebuilder-project-invoice-form.jsp',1,'User Guide','1','https://connect.mnscu.edu/sites/isrsproducts/Accounting/Documents/PaymentProject.docx');
+
+
+Insert into ISRSVAL.DOC_LINK (DOC_LINK_ID,APP_PAGE_NAME,APP_PAGE_SECTION_NBR,DOC_TYPE_DESC,PRESENT_ORDER_CODE,DOC_LINK_URL)
+values (100,'ebuilder-project-invoice-form.jsp',1,'Help Index','2','https://connect.mnscu.edu/sites/isrsproducts/Accounting/Documents/Forms/User%20Docs.aspx?View={C63D26E7-D741-4DA3-B361-6F5E7BB216F5}&FilterField1=Topic1&FilterValue1=73&FilterOp1=In&FilterLookupId1=1&FilterData1=0%2Cb75de324%2Deb8b%2D4bf6%2Db23d%2Dafb1bba87d07');
+
+         */
+
+        if (!DocLink.count()) {
+
+            def docLink1 = new DocLink(docLinkId:1, appPageName:"payment-voucher-form.jsp", appPageSectionNbr:1, docTypeDesc:"User Guide", presentOrderCode: 1, docLinkUrl:"https://connect.mnscu.edu/sites/isrsproducts/Accounting/Documents/EncumbranceProject.docx" ).save(failOnError: true)
+            def docLink2 = new DocLink(docLinkId:2, appPageName:"ebuilder-project-invoice-form.jsp", appPageSectionNbr:1, docTypeDesc:"User Guide", presentOrderCode: 1, docLinkUrl:"https://connect.mnscu.edu/sites/isrsproducts/Accounting/Documents/PaymentProject.docx" ).save(failOnError: true)
+
+            def docLink3 = new DocLink(docLinkId:3, appPageName:"ebuilder-project-invoice-form.jsp", appPageSectionNbr:1, docTypeDesc:"Help Index", presentOrderCode: 2, docLinkUrl:"https://connect.mnscu.edu/sites/isrsproducts/Accounting/Documents/Forms/User%20Docs.aspx" ).save(failOnError: true)
+            /*
+            def docLink1 = new DocLink(docLinkId:1, appPageName:"payment-voucher-form.jsp", appPageSectionNbr:1, docTypeDesc:"User Guide", presentOrderCode: 1, docLinkUrl:"https:--connect.mnscu.edu-sites-isrsproducts-Accounting-Documents-EncumbranceProject.docx" ).save(failOnError: true)
+            def docLink2 = new DocLink(docLinkId:2, appPageName:"ebuilder-project-invoice-form.jsp", appPageSectionNbr:1, docTypeDesc:"User Guide", presentOrderCode: 1, docLinkUrl:"https:--connect.mnscu.edu-sites-isrsproducts-Accounting-Documents-PaymentProject.docx" ).save(failOnError: true)
+            */
         }
     }
     def destroy = {

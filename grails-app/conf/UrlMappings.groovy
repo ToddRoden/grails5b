@@ -11,5 +11,6 @@ class UrlMappings {
         "500"(view:'/error')
         "/persons"(resources:"person")
         "/addresses"(resources:"address")
+        "/docLinks"(resources:"docLink")
 	}
 }
