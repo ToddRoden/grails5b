@@ -1,0 +1,4 @@
+http://keaplogik.blogspot.com/2012/10/grails-part-2-configuring-web.html
+
+http://keaplogik.blogspot.com/2012/10/grails-part-3-building-crud-application.html
+
