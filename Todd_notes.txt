@@ -66,3 +66,186 @@ firstName: "John",
 lastName: "Doe"
 }
 
+
+
+----------------------
+http://localhost:8080/test5b/persons.json
+
+[
+{
+class: "org.mycompany.Person",
+id: 1,
+addresses: [
+{
+class: "org.mycompany.Address",
+id: 5
+},
+{
+class: "org.mycompany.Address",
+id: 4
+},
+{
+class: "org.mycompany.Address",
+id: 1
+},
+{
+class: "org.mycompany.Address",
+id: 3
+},
+{
+class: "org.mycompany.Address",
+id: 2
+}
+],
+firstName: "John",
+lastName: "Doe"
+},
+{
+class: "org.mycompany.Person",
+id: 2,
+addresses: [
+{
+class: "org.mycompany.Address",
+id: 7
+},
+{
+class: "org.mycompany.Address",
+id: 8
+},
+{
+class: "org.mycompany.Address",
+id: 9
+},
+{
+class: "org.mycompany.Address",
+id: 6
+}
+],
+firstName: "Joe",
+lastName: "Reed"
+},
+{
+class: "org.mycompany.Person",
+id: 3,
+addresses: [
+{
+class: "org.mycompany.Address",
+id: 11
+},
+{
+class: "org.mycompany.Address",
+id: 10
+}
+],
+firstName: "Jim",
+lastName: "Smith"
+},
+{
+class: "org.mycompany.Person",
+id: 4,
+addresses: [
+{
+class: "org.mycompany.Address",
+id: 12
+},
+{
+class: "org.mycompany.Address",
+id: 13
+}
+],
+firstName: "Patrick",
+lastName: "Hartwin"
+},
+{
+class: "org.mycompany.Person",
+id: 5,
+addresses: [
+{
+class: "org.mycompany.Address",
+id: 15
+},
+{
+class: "org.mycompany.Address",
+id: 14
+},
+{
+class: "org.mycompany.Address",
+id: 16
+}
+],
+firstName: "Steve",
+lastName: "Gunther"
+},
+{
+class: "org.mycompany.Person",
+id: 6,
+addresses: [
+{
+class: "org.mycompany.Address",
+id: 17
+}
+],
+firstName: "Sam",
+lastName: "Whiting"
+},
+{
+class: "org.mycompany.Person",
+id: 7,
+addresses: [
+{
+class: "org.mycompany.Address",
+id: 18
+},
+{
+class: "org.mycompany.Address",
+id: 20
+},
+{
+class: "org.mycompany.Address",
+id: 19
+}
+],
+firstName: "Sarah",
+lastName: "Mathews"
+},
+{
+class: "org.mycompany.Person",
+id: 8,
+addresses: [
+{
+class: "org.mycompany.Address",
+id: 22
+},
+{
+class: "org.mycompany.Address",
+id: 21
+},
+{
+class: "org.mycompany.Address",
+id: 23
+}
+],
+firstName: "Lisa",
+lastName: "Pudock"
+},
+{
+class: "org.mycompany.Person",
+id: 9,
+addresses: [
+{
+class: "org.mycompany.Address",
+id: 24
+}
+],
+firstName: "Kara",
+lastName: "Whiting"
+}
+]
+
+
+----------------------
+
+
+curl -i -H "Accept: application/xml" localhost:8080/test5b/persons/1
+
+<?xml version="1.0" encoding="UTF-8"?><person id="1"><addresses><address id="4" /><address id="5" /><address id="2" /><address id="1" /><address id="3" /></addresses><firstName>John</firstName><lastName>Doe</lastName></person>
