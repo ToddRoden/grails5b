@@ -13,3 +13,56 @@ gvm use grails 2.2.4
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home
 
 grails set-grails-version 2.5.2
+
+
+curl -i -H "Accept: application/json" localhost:8080/test5b/persons/1
+
+=============
+http://stackoverflow.com/questions/26715063/grails-2-4-4-resource-gives-404-for-all-urls
+
+Try running grails url-mappings-report to see if it's mapped but using an unexpected pattern, or not mapped at all – Burt Beckwith Nov 3 '14 at 13:48
+
+up vote
+1
+down vote
+accepted
+I found a working solution:
+
+Remove the @Resource(uri='/users') line
+Add the line: "/users"(resources:"user") to the file: urlMappings.groovy.
+Et voila, works as it should have with the @Resource annotation, no other changes required.
+
+I can only assume there is a bug in Resources annotation, or that it only works if you have no controller already defined or similar.
+
+
+http://localhost:8080/test5b/persons/1.json
+
+{
+class: "org.mycompany.Person",
+id: 1,
+addresses: [
+{
+class: "org.mycompany.Address",
+id: 3
+},
+{
+class: "org.mycompany.Address",
+id: 5
+},
+{
+class: "org.mycompany.Address",
+id: 1
+},
+{
+class: "org.mycompany.Address",
+id: 2
+},
+{
+class: "org.mycompany.Address",
+id: 4
+}
+],
+firstName: "John",
+lastName: "Doe"
+}
+
