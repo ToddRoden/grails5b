@@ -10,5 +10,6 @@ class UrlMappings {
         "/"(view:"/index")
         "500"(view:'/error')
         "/persons"(resources:"person")
+        "/addresses"(resources:"address")
 	}
 }
