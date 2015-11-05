@@ -249,3 +249,13 @@ lastName: "Whiting"
 curl -i -H "Accept: application/xml" localhost:8080/test5b/persons/1
 
 <?xml version="1.0" encoding="UTF-8"?><person id="1"><addresses><address id="4" /><address id="5" /><address id="2" /><address id="1" /><address id="3" /></addresses><firstName>John</firstName><lastName>Doe</lastName></person>
+
+====================
+
+
+http://localhost:8080/test5b
+http://localhost:8080/test5b/docLinks.json
+
+http://localhost:8080/test5b/docLinks/1.json
+
+http://localhost:8080/test5b/docLinks/1.xml
